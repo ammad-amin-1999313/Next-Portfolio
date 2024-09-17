@@ -6,7 +6,7 @@ import { IoCopyOutline } from "react-icons/io5";
 import Lottie from "react-lottie";
 
 import { cn } from "@/lib/utils";
-
+// 
 
 import { BackgroundGradientAnimation } from "./GradientBg";
 import GridGlobe from "./GridGlobe";
@@ -68,7 +68,7 @@ export const BentoGridItem = ({
   };
 
   const handleCopy = () => {
-    const text = "hsu@jsmastery.pro";
+    const text = "sardarammad6@gmail.com";
     navigator.clipboard.writeText(text);
     setCopied(true);
   };
@@ -181,7 +181,7 @@ export const BentoGridItem = ({
                   }`}
               >
                 {/* <img src="/confetti.gif" alt="confetti" /> */}
-                <Lottie options={defaultOptions} height={200} width={400} />
+                <Lottie options={{loop:copied,autoplay:copied,animationData,rendererSettings:{preserveAspectRatio:"xMidMid slice",    }}} height={200} width={400} />
               </div>
 
               <MagicButton
