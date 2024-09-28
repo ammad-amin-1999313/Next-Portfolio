@@ -6,11 +6,11 @@ import { Button } from "../components/ui/Button";
 const Experience = () => {
   return (
     <div className="py-20 w-full">
-      <h1 className="heading w-[491px] font-semibold text-[48px] mx-auto">
+      <h1 className="heading px-[20px] lg:px-28 text-2xl lg:text-[48px] font-bold text-center">
         My <span className="text-purple">work experience</span>
       </h1>
 
-      <div className="w-[80%] mx-auto mt-12 grid lg:grid-cols-2 grid-cols-1 gap-10">
+      <div className="lg:w-[80%] px-[20px] lg:mx-auto mt-12 grid lg:grid-cols-2 grid-cols-1 gap-10">
         {workExperience.map((card) => (
           <Button
             key={card.id}

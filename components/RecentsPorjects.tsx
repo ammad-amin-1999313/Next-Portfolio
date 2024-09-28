@@ -9,9 +9,9 @@ import { PinContainer } from "./ui/PinContainer";
 const RecentProjects = () => {
   return (
     <div className="py-20">
-      <h1 className="heading px-28 text-3xl">
+      <h1 className="heading px-[20px] lg:px-28 text-2xl lg:text-[48px] font-bold text-center">
         A small selection of{" "}
-        <span className="text-purple capitalize">recent projects</span>
+        <span className="text-purple">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
         {projects.map(({id,title,des,img,iconLists,link}) => (
