@@ -206,13 +206,16 @@ export const navItems = [
     {
       id: 1,
       img: "/git.svg",
+      link:"https://github.com/ammad-amin-1999313"
     },
     {
       id: 2,
       img: "/twit.svg",
+      link:"https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
     },
     {
       id: 3,
       img: "/link.svg",
+      link:"https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile"
     },
   ];

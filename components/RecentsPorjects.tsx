@@ -2,21 +2,22 @@
 
 import { FaLocationArrow } from "react-icons/fa6";
 
-import { projects } from "@/data";
-import { PinContainer } from "./ui/Pin";
+import { projects } from "../Data";
+import { PinContainer } from "./ui/PinContainer";
+// import { PinContainer } from "./ui/Pin";
 
 const RecentProjects = () => {
   return (
     <div className="py-20">
-      <h1 className="heading">
+      <h1 className="heading px-28 text-3xl">
         A small selection of{" "}
-        <span className="text-purple">recent projects</span>
+        <span className="text-purple capitalize">recent projects</span>
       </h1>
       <div className="flex flex-wrap items-center justify-center p-4 gap-16 mt-10">
-        {projects.map((item) => (
+        {projects.map(({id,title,des,img,iconLists,link}) => (
           <div
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
-            key={item.id}
+            key={id}
           >
             <PinContainer
               title="/ui.aceternity.com"
@@ -30,14 +31,14 @@ const RecentProjects = () => {
                   <img src="/bg.png" alt="bgimg" />
                 </div>
                 <img
-                  src={item.img}
+                  src={img}
                   alt="cover"
                   className="z-10 absolute bottom-0"
                 />
               </div>
 
               <h1 className="font-bold lg:text-2xl md:text-xl text-base line-clamp-1">
-                {item.title}
+                {title}
               </h1>
 
               <p
@@ -47,12 +48,12 @@ const RecentProjects = () => {
                   margin: "1vh 0",
                 }}
               >
-                {item.des}
+                {des}
               </p>
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                  {iconLists.map((icon, index) => (
                     <div
                       key={index}
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
